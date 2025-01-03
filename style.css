@@ -76,12 +76,12 @@ body {
   
   .project {
     background: #f9f9f9;
-    border: 1px solid #ddd;
+    border: none;
     padding: 15px;
     border-radius: 8px;
     width: 30%;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
   .project h3 {
     margin-top: 0;
@@ -104,3 +104,49 @@ body {
   footer p {
     margin: 0;
   }
+
+  /* Horizontal Skills List */
+  #skills ul {
+    display: flex; /* Arrange list items in a row */
+    justify-content: center; /* Center the list horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Add spacing between items */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+  }
+  
+  #skills li {
+    display: inline-block;
+    font-size: 16px; /* Adjust text size */
+    color: #333; /* Set text color */
+    padding: 5px 15px; /* Add padding inside each skill */
+    border-radius: 10px; /* Make the borders rounded */
+    background-color: #f9f9f9; /* Add a light background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
+  }
+  
+  #skills li:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #e8e4ea; /* Change background color on hover */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
+  }
+
+  #projects .project:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+    background-color: #e8e4ea; /* Change background color on hover */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
+  }
+  
+  @media (max-width: 768px) {
+    #skills ul {
+      gap: 10px; /* Reduce gap between items for smaller screens */
+    }
+  
+    #skills li {
+      font-size: 14px; /* Adjust font size for smaller screens */
+      padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  
