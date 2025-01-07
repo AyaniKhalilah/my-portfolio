@@ -8,7 +8,7 @@ console.log(skillsList)
 //manual construction
 const skillItem = document.createElement("li");
 skillItem.textContent = skills[0];
-skillsList.appendChild(skillItem);
+//skillsList.appendChild(skillItem);
 
 
 // //variables 
