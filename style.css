@@ -132,12 +132,6 @@ body {
     background-color: #e8e4ea; /* Change background color on hover */
     transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
   }
-
-  #projects .project:hover {
-    transform: scale(1.01); /* Slightly enlarge on hover */
-    background-color: #e8e4ea; /* Change background color on hover */
-    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
-  }
   
   @media (max-width: 768px) {
     #skills ul {
@@ -149,4 +143,74 @@ body {
       padding: 5px 10px; /* Adjust padding for smaller screens */
     }
   }
+
+  /* Highlight class: Adds a background color and bold text */ 
+.highlight {
+  background-color: rgba(246, 246, 105, 0.898); font-weight: bold;
+  padding: 5px;
+  border-radius: 3px; 
+  } 
+  
+  /* Dark mode class: Changes the background and text colors */ 
+  .dark-mode {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */ 
+  }
+
+  .project {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  header {
+    background: linear-gradient(to right, #886497, #b389c3);
+  }
+
+  .project {
+    position: relative; /* Needed for the image to position within the project container */
+    overflow: hidden; /* Ensures the image doesn’t go outside the container */
+  }
+  
+  .project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales nicely */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance */
+    transform: scale(1.1); /* Slightly zoomed-out initially */
+  }
+  
+  .project:hover .project-image {
+    opacity: 0.5; /* Makes the image translucent */
+    transform: scale(1); /* Scales the image to its full size */
+  }
+
+  .project {
+  position: relative; /* Needed for the image to position within the project container */
+  overflow: hidden; /* Ensures the image doesn’t go outside the container */
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales nicely */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance */
+  transform: scale(1.1); /* Slightly zoomed-out initially */
+}
+
+.project:hover .project-image {
+  opacity: 0.2; /* Makes the image translucent */
+  transform: scale(1); /* Scales the image to its full size */
+}
   
